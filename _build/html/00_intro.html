@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Fundamentos de Programação &#8212; Fundamentos de Programação</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b56cc210" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '00_intro';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Fundamentos de Programação - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Fundamentos de Programação - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Fundamentos de Programação
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F00_intro.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/00_intro.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Fundamentos de Programação</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#desenvolvimento-do-curso">Desenvolvimento do Curso</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-voce-aprendera">O que você aprenderá</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conteudo-programatico-em-desenvolvimento">Conteúdo Programático (⚠️ em desenvolvimento):</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">Feedback</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atualizacoes">Atualizações</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elementos-graficos">Elementos Gráficos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-e-pratique">Explore e Pratique!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pataformas-de-cursos">Pataformas de Cursos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criadores-de-conteudo-do-youtube">Criadores de conteúdo do YouTube</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beecrowd">Beecrowd</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referências</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="fundamentos-de-programacao">
+<h1>Fundamentos de Programação<a class="headerlink" href="#fundamentos-de-programacao" title="Link to this heading">#</a></h1>
+<p>Bem-vindos(as) ao curso de Fundamentos de Programação! Este curso foi desenvolvido para os alunos do curso de Bacharelado em Engenharia de Produção (EPR) da Universidade do Estado do Amapá (<a class="reference external" href="http://www.ueap.edu.br">UEAP</a>), mas seus conceitos possuem aplicações amplas, abrangendo diversas áreas do conhecimento e setores da indústria. Neste curso, abordaremos os fundamentos da programação, criando uma base sólida para desenvolver algoritmos e resolver problemas computacionais. O curso está estruturado para que você possa compreender os principais conceitos de lógica de programação e aplicá-los na prática, tendo a linguagem de programação <a class="reference external" href="https://www.python.org/">Python</a> como ferramenta principal.</p>
+<p>Esperamos que esta jornada seja enriquecedora, estimulante e repleta de aprendizados significativos. Para aproveitar ao máximo este curso, é desejável que você tenha curiosidade e disposição para aprender, sem a necessidade de conhecimentos prévios em programação.</p>
+<section id="desenvolvimento-do-curso">
+<h2>Desenvolvimento do Curso<a class="headerlink" href="#desenvolvimento-do-curso" title="Link to this heading">#</a></h2>
+<p>O curso está sendo desenvolvido no formato de um livro interativo utilizando o <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">Jupyter Book</a>, uma ferramenta dinâmica que integra textos, códigos e elementos gráficos em um ambiente único. Os materiais contidos nesse curso foram desenvolvidos com base em várias referências, listadas na seção Referências abaixo.</p>
+</section>
+<section id="o-que-voce-aprendera">
+<h2>O que você aprenderá<a class="headerlink" href="#o-que-voce-aprendera" title="Link to this heading">#</a></h2>
+<p>A disciplina de Fundamentos de Programação, tem como objetivo principal introduzir os conceitos básicos de programação e lógica computacional, preparando os alunos para o desenvolvimento de algoritmos e a resolução de problemas de forma estruturada. Durante o semestre, exploraremos as principais ferramentas e técnicas da linguagem de programação Python, abordando desde os fundamentos até a implementação de soluções práticas. Além de construir uma base sólida em programação, apresentaremos, de forma introdutória, temas avançados para ampliar suas possibilidades de aplicação e incentivar estudos futuros.</p>
+<section id="conteudo-programatico-em-desenvolvimento">
+<h3>Conteúdo Programático (⚠️ em desenvolvimento):<a class="headerlink" href="#conteudo-programatico-em-desenvolvimento" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Lógica Computacional</p></li>
+<li><p>Algoritmos</p></li>
+<li><p>Ambientes de Desenvolvimento</p></li>
+</ul>
+</section>
+</section>
+<section id="feedback">
+<h2>Feedback<a class="headerlink" href="#feedback" title="Link to this heading">#</a></h2>
+<p>Sua opinião é fundamental para o aprimoramento deste curso! Durante o semestre, encorajamos você a compartilhar dúvidas, sugestões e comentários sobre o material e as aulas. Você pode enviar seu feedback diretamente pelo <a class="reference external" href="https://sigaa.ueap.edu.br/sigaa/verTelaLogin.do">SIGAA</a> ou pelo e-mail institucional. A sua participação ativa nos ajuda a criar um ambiente de aprendizado mais dinâmico e eficiente para todos.</p>
+</section>
+<section id="atualizacoes">
+<h2>Atualizações<a class="headerlink" href="#atualizacoes" title="Link to this heading">#</a></h2>
+<p>Esta é a primeira versão do curso, e ele será constantemente atualizado. Não manteremos uma lista de alterações feitas, no entanto você não deve se preocupar, as últimas atualizações sempre estarão disponíveis neste endereço. Além disso, sua participação ativa é essencial para mantermos o conteúdo relevante e atualizado.</p>
+</section>
+<section id="elementos-graficos">
+<h2>Elementos Gráficos<a class="headerlink" href="#elementos-graficos" title="Link to this heading">#</a></h2>
+<p>O curso faz uso de vários elementos gráficos para representar diferentes tipos de mensagens. Ao longo dele usaremos diversos tipos de destaque para chamar sua atenção para o conteúdo quando necessário. Além disso, diagramas, blocos de código, fluxogramas e animações serão apresentados em momentos oportunos para enriquecer o aprendizado.</p>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota!</p>
+<p>Este destaque é usado para informações importantes que exigem sua atenção, como instruções específicas ou esclarecimentos essenciais.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Dica!</p>
+<p>Usaremos este destaque para fornecer sugestões úteis que podem facilitar a compreensão dos conceitos ou a resolução de exercícios.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Atenção!</p>
+<p>Este aviso indica algo crítico que pode comprometer seu entendimento ou levar a erros comuns. Leia com atenção antes de continuar.</p>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Veja também!</p>
+<p>Quando houver referências externas ou materiais complementares, este destaque chamará sua atenção para recursos adicionais que podem enriquecer seu aprendizado.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Aviso.</p>
+<p>Este destaque alerta para possíveis dificuldades ou pontos de atenção que podem impactar seu progresso. Fique atento às instruções aqui apresentadas.</p>
+</div>
+<div class="exercise admonition">
+<p class="admonition-title">Exercicío!</p>
+<p>Sempre que encontrar este destaque, significa que há um exercício prático para reforçar seu aprendizado. Tente resolvê-lo antes de prosseguir.</p>
+</div>
+<div class="examples admonition">
+<p class="admonition-title">Exemplos!</p>
+<p>Sempre que precisar de um exemplo prático para ilustrar um conceito, este destaque será usado. Ele ajudará a entender melhor a aplicação dos conteúdos abordados.</p>
+</div>
+</section>
+<section id="explore-e-pratique">
+<h2>Explore e Pratique!<a class="headerlink" href="#explore-e-pratique" title="Link to this heading">#</a></h2>
+<p>O aprendizado de programação vai além do que é abordado em sala de aula. Para aprofundar seus conhecimentos e praticar ainda mais, recomendo explorar os diversos recursos gratuitos disponíveis na Internet.</p>
+<section id="pataformas-de-cursos">
+<h3>Pataformas de Cursos<a class="headerlink" href="#pataformas-de-cursos" title="Link to this heading">#</a></h3>
+<p>Existem diversas plataformas que oferecem cursos gratuitos de programação e lógica. Algumas opções incluem:</p>
+<p><a class="reference external" href="https://www.coursera.org">Coursera</a> – O Coursera é uma plataforma de cursos online que oferece conteúdos de universidades renomadas e empresas líderes. Com opções gratuitas e pagas, abrange diversas áreas, incluindo programação, ciência de dados e inteligência artificial, permitindo que os alunos aprendam no seu próprio ritmo e obtenham certificados reconhecidos.</p>
+<p><a class="reference external" href="https://www.cursoemvideo.com">Curso em Vídeo</a> – O Curso em Vídeo é uma plataforma gratuita criada pelo professor Gustavo Guanabara, oferecendo cursos de programação, tecnologia e computação. Com uma abordagem didática e acessível, os cursos incluem Python, HTML, JavaScript e mais, sendo ideais para iniciantes e autodidatas que desejam aprender do zero.</p>
+</section>
+<section id="criadores-de-conteudo-do-youtube">
+<h3>Criadores de conteúdo do YouTube<a class="headerlink" href="#criadores-de-conteudo-do-youtube" title="Link to this heading">#</a></h3>
+<p>Alguns criadores de conteúdo no <a class="reference external" href="https://www.youtube.com/">YouTube</a> produzem materiais de qualidade sobre Programação, Python e áreas correlacionadas.</p>
+<p><a class="reference external" href="https://www.youtube.com/&#64;rafaellaballerini">Rafaela Ballerini</a> – é uma criadora de conteúdo que ensina programação de forma acessível e didática. Seu canal no YouTube aborda temas como lógica de programação, Git/GitHub e desenvolvimento web, sendo uma excelente opção para iniciantes que desejam entrar no mundo da tecnologia.</p>
+<p><a class="reference external" href="https://www.youtube.com/&#64;pgdinamica">Programação Dinâmica</a> – é um canal voltado para ciência de dados, machine learning e programação. Apresentado por Hallison e Kizzy, traz conteúdos didáticos e práticos, ajudando estudantes e profissionais a aprofundarem seus conhecimentos em tecnologia e análise de dados.</p>
+<p><a class="reference external" href="https://www.youtube.com/&#64;FilipeDeschamps">Felipe Deschamps</a> – produz conteúdos sobre programação e tecnologia, trazendo explicações detalhadas e projetos práticos. Seu canal aborda desde conceitos básicos até inteligência artificial, tornando o aprendizado envolvente e aplicável ao dia a dia dos desenvolvedores.</p>
+</section>
+<section id="beecrowd">
+<h3>Beecrowd<a class="headerlink" href="#beecrowd" title="Link to this heading">#</a></h3>
+<p>A plataforma <a class="reference internal" href="#(https://beecrowd.com/)"><span class="xref myst">Beecrowd</span></a> oferece desafios de programação para você testar suas habilidades e praticar a lógica de programação na prática. Resolver problemas no Beecrowd é uma excelente forma de melhorar seu raciocínio lógico e aplicar os conceitos do curso.</p>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota!</p>
+<p>Iremos utilizar essa plataforma ao longo das nossas aulas, portanto, recomendo que você se antecipe e crie sua conta para já se familiarizar com o ambiente e os desafios disponíveis.</p>
+</div>
+</section>
+</section>
+<section id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
+<p>Estas notas de aula usam os livros e artigos abaixo, bem como a documentação oficial on-line das ferramentas usadas, como base. Alguns conteúdos nestas notas podem reproduzir de perto o conteúdo encontrado nestes recursos. Observe que estas notas de aula devem ser usadas exclusivamente no contexto do curso. Qualquer uso fora das atividades do curso é proibido, e o material original referenciado acima deve ser usado em seu lugar.</p>
+<div class="docutils container" id="id1">
+<div role="list" class="citation-list">
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>C+09<span class="fn-bracket">]</span></span>
+<p>E Charles and others. Introduction to algorithms. 2009.</p>
+</div>
+<div class="citation" id="id3" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ger16<span class="fn-bracket">]</span></span>
+<p>Judith L Gersting. <em>Fundamentos matemáticos para a ciência da computação</em>. Volume 7. LTC, 2016.</p>
+</div>
+<div class="citation" id="id5" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LG02<span class="fn-bracket">]</span></span>
+<p>Anita Lopes and Guto Garcia. Introdução à programação. <em>Editora Campus</em>, 2002.</p>
+</div>
+<div class="citation" id="id2" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MI13<span class="fn-bracket">]</span></span>
+<p>Carlos MURAKAMI and Celso IEZZI. Fundamentos de matemática elementar: conjuntos e funções. 2013.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#desenvolvimento-do-curso">Desenvolvimento do Curso</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-voce-aprendera">O que você aprenderá</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conteudo-programatico-em-desenvolvimento">Conteúdo Programático (⚠️ em desenvolvimento):</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">Feedback</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atualizacoes">Atualizações</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elementos-graficos">Elementos Gráficos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-e-pratique">Explore e Pratique!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pataformas-de-cursos">Pataformas de Cursos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criadores-de-conteudo-do-youtube">Criadores de conteúdo do YouTube</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beecrowd">Beecrowd</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referências</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rafael Fogarolli Vieira
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: 00_intro
+#chapters:
+#- file: 00_introducao_programacao
+#- file: 01_nocoes_logica
+#- file: 02_algoritmos
+#- file: 03_ambientes_desenvolvimento
+#- file: 04_conceitos_fundamentais
