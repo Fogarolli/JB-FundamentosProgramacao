@@ -1,6 +1,6 @@
-# Fundamentos de Programação
+# Bem-vindos(as) ao curso de Fundamentos de Programação!
 
-Bem-vindos(as) ao curso de Fundamentos de Programação! Este curso foi desenvolvido para os alunos do curso de Bacharelado em Engenharia de Produção (EPR) da Universidade do Estado do Amapá ([UEAP](http://www.ueap.edu.br)), mas seus conceitos possuem aplicações amplas, abrangendo diversas áreas do conhecimento e setores da indústria. Neste curso, abordaremos os fundamentos da programação, criando uma base sólida para desenvolver algoritmos e resolver problemas computacionais. O curso está estruturado para que você possa compreender os principais conceitos de lógica de programação e aplicá-los na prática, tendo a linguagem de programação [Python](https://www.python.org/) como ferramenta principal.
+Este curso foi desenvolvido para os alunos do curso de Bacharelado em Engenharia de Produção (EPR) da Universidade do Estado do Amapá ([UEAP](http://www.ueap.edu.br)), mas seus conceitos possuem aplicações amplas, abrangendo diversas áreas do conhecimento e setores da indústria. Neste curso, abordaremos os fundamentos da programação, criando uma base sólida para desenvolver algoritmos e resolver problemas computacionais. O curso está estruturado para que você possa compreender os principais conceitos de lógica de programação e aplicá-los na prática, tendo a linguagem de programação [Python](https://www.python.org/) como ferramenta principal.
 
 Esperamos que esta jornada seja enriquecedora, estimulante e repleta de aprendizados significativos. Para aproveitar ao máximo este curso, é desejável que você tenha curiosidade e disposição para aprender, sem a necessidade de conhecimentos prévios em programação.
 
@@ -11,7 +11,7 @@ O curso está sendo desenvolvido no formato de um livro interativo utilizando o 
 
 ## O que você aprenderá
 
-A disciplina de Fundamentos de Programação, tem como objetivo principal introduzir os conceitos básicos de programação e lógica computacional, preparando os alunos para o desenvolvimento de algoritmos e a resolução de problemas de forma estruturada. Durante o semestre, exploraremos as principais ferramentas e técnicas da linguagem de programação Python, abordando desde os fundamentos até a implementação de soluções práticas. Além de construir uma base sólida em programação, apresentaremos, de forma introdutória, temas avançados para ampliar suas possibilidades de aplicação e incentivar estudos futuros.
+A disciplina de Fundamentos de Programação tem como objetivo principal introduzir os conceitos básicos de programação e lógica computacional, preparando os alunos para o desenvolvimento de algoritmos e a resolução de problemas de forma estruturada. Durante o semestre, exploraremos as principais ferramentas e técnicas da linguagem de programação Python, abordando desde os fundamentos até a implementação de soluções práticas. Além de construir uma base sólida em programação, apresentaremos, de forma introdutória, temas avançados para ampliar suas possibilidades de aplicação e incentivar estudos futuros.
 
 ### Conteúdo Programático (⚠️ em desenvolvimento):
 
@@ -19,13 +19,17 @@ A disciplina de Fundamentos de Programação, tem como objetivo principal introd
 - Algoritmos
 - Ambientes de Desenvolvimento
 
+```{admonition} Nota!
+Em breve, disponibilizaremos mais detalhes sobre os tópicos abordados, incluindo exercícios práticos e aplicações reais.”
+```
+
 ## Feedback
 
 Sua opinião é fundamental para o aprimoramento deste curso! Durante o semestre, encorajamos você a compartilhar dúvidas, sugestões e comentários sobre o material e as aulas. Você pode enviar seu feedback diretamente pelo [SIGAA](https://sigaa.ueap.edu.br/sigaa/verTelaLogin.do) ou pelo e-mail institucional. A sua participação ativa nos ajuda a criar um ambiente de aprendizado mais dinâmico e eficiente para todos.
 
 ## Atualizações
 
-Esta é a primeira versão do curso, e ele será constantemente atualizado. Não manteremos uma lista de alterações feitas, no entanto você não deve se preocupar, as últimas atualizações sempre estarão disponíveis neste endereço. Além disso, sua participação ativa é essencial para mantermos o conteúdo relevante e atualizado.
+Este curso está em constante evolução, e novas atualizações serão incorporadas ao longo do tempo. Certifique-se de acessar sempre este endereço para obter o material mais recente. Além disso, sua participação ativa é essencial para mantermos o conteúdo relevante e atualizado.
 
 ## Elementos Gráficos
 
@@ -86,12 +90,37 @@ Alguns criadores de conteúdo no [YouTube](https://www.youtube.com/) produzem ma
 
 ### Beecrowd
 
-A plataforma [Beecrowd]((https://beecrowd.com/)) oferece desafios de programação para você testar suas habilidades e praticar a lógica de programação na prática. Resolver problemas no Beecrowd é uma excelente forma de melhorar seu raciocínio lógico e aplicar os conceitos do curso.
+A plataforma [Beecrowd](https://beecrowd.com/) oferece desafios de programação para você testar suas habilidades e praticar a lógica de programação na prática. Resolver problemas no Beecrowd é uma excelente forma de melhorar seu raciocínio lógico e aplicar os conceitos do curso.
 
+👉 [Criar conta no Beecrowd](https://judge.beecrowd.com/en/login)
 
 ```{admonition} Nota!
 Iremos utilizar essa plataforma ao longo das nossas aulas, portanto, recomendo que você se antecipe e crie sua conta para já se familiarizar com o ambiente e os desafios disponíveis.
 ```
+
+
+## 🎬📺 Indicações de Filmes e Séries 
+
+Além dos materiais didáticos e exercícios práticos, aprender sobre programação e lógica computacional pode ser divertido! Filmes, séries e jogos interativos ajudam a visualizar conceitos abstratos de maneira lúdica e estimulante. Aqui estão algumas sugestões que podem complementar seus estudos.
+
+```{dropdown} 🎬 [Hidden Figures (2016) - Estrelas Além do Tempo](https://www.imdb.com/pt/title/tt4846340/?ref_=fn_all_ttl_1)
+
+📌 Sobre: Baseado na história real de três mulheres negras que foram peças-chave na NASA durante a corrida espacial. Elas usaram suas habilidades matemáticas e computacionais para contribuir com avanços na engenharia aeroespacial.  
+🧠 Relevância para o curso: Mostra a importância da matemática e da lógica na computação, além de destacar o impacto da programação no avanço tecnológico.
+```
+
+```{dropdown} 🎬 [The Imitation Game (2014) – O Jogo da Imitação](https://www.imdb.com/pt/title/tt2084970/)
+
+📌 Sobre: Conta a história de Alan Turing, o matemático que criou a base da computação moderna ao desenvolver a máquina Enigma.  
+🧠 Relevância para o curso: Explora conceitos de criptografia, lógica computacional e inteligência artificial.  
+```
+
+```{dropdown} 📺 [Mr. Robot: Sociedade Hacker (2015 – 2019)](https://www.imdb.com/pt/title/tt4158110/?ref_=fn_all_ttl_1)
+
+📌 Sobre: Série sobre um programador brilhante que se torna hacker e luta contra grandes corporações.  
+🧠 Relevância para o curso: Apresenta temas como segurança da informação, programação e lógica computacional.  
+```
+
 
 
 ## Referências

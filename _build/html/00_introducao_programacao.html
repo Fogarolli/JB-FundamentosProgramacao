@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Introdução a Programação &#8212; Fundamentos de Programação</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b56cc210" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '00_introducao_programacao';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Noções de Lógica" href="01_nocoes_logica.html" />
+    <link rel="prev" title="Bem-vindos(as) ao curso de Fundamentos de Programação!" href="00_intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00_intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Fundamentos de Programação - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Fundamentos de Programação - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00_intro.html">
+                    Bem-vindos(as) ao curso de Fundamentos de Programação!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introdução a Programação</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_nocoes_logica.html">Noções de Lógica</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F00_introducao_programacao.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/00_introducao_programacao.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introdução a Programação</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-e-programacao">O que é programação?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-e-um-programa-de-computador">O que é um programa de computador?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacoes">Aplicações</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-aprender-a-programar">Por que aprender a programar?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linguagem-de-programacao">Linguagem de Programação</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiops-de-linguagem-de-programacao">Tiops de Linguagem de Programação</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacao-entre-linguagens">Comparação entre Linguagens</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introducao-a-programacao">
+<h1>Introdução a Programação<a class="headerlink" href="#introducao-a-programacao" title="Link to this heading">#</a></h1>
+<div class="box-content">
+  <strong>
+    “Todos deveriam aprender a programar um computador, porque isso ensina a pensar.” — <a href=https://www.youtube.com/watch?v=vD3vCmRbclI> Steve Jobs
+    </a> 
+  </strong>
+</div>
+<p>Vivemos em uma era digital, na qual dispositivos eletrônicos, como computadores, <em>smartphones</em> e até mesmo roupas inteligentes, estão presentes em praticamente todos os momentos do nosso dia. Esses dispositivos funcionam processando <strong>dados</strong> sob o controle de conjuntos de instruções chamados <strong>programas de computador</strong>. Esses programas orientam o funcionamento das máquinas, seguindo sequências ordenadas de ações criadas por pessoas chamadas <strong>programadores</strong>.</p>
+<section id="o-que-e-programacao">
+<h2>O que é programação?<a class="headerlink" href="#o-que-e-programacao" title="Link to this heading">#</a></h2>
+<p>A programação, também conhecida como codificação, é o processo de criação de instruções que computadores e outros dispositivos eletrônicos podem executar. Essas instruções são escritas em diferentes <strong>linguagens de programação</strong>  que os computadores conseguem interpretar. Programar é, essencialmente, “conversar” com o computador, dizendo-lhe exatamente o que fazer.</p>
+<p>Além de permitir o controle e a automação de dispositivos, aprender a programar desenvolve uma habilidade essencial: a <strong>resolução de problemas</strong>. Programar exige formular problemas, pensar criativamente sobre soluções e expressar essas soluções de maneira clara e precisa. Assim, o processo de aprendizado da programação se torna uma excelente oportunidade para desenvolver o raciocínio lógico e a capacidade de resolver desafios de forma estruturada.</p>
+</section>
+<section id="o-que-e-um-programa-de-computador">
+<h2>O que é um programa de computador?<a class="headerlink" href="#o-que-e-um-programa-de-computador" title="Link to this heading">#</a></h2>
+<p>Um <strong>programa</strong> (ou <em><strong>software</strong></em>) é um conjunto de <strong>instruções</strong> que um computador segue para concluir uma tarefa, como realizar um cálculo. A computação pode ser matemática, como resolver um sistema de equações ou encontrar as raízes de um polinômio, mas também pode ser simbólica, como pesquisar e substituir texto em um documento ou compilar um programa.</p>
+<p>Podemos comparar um programa a uma receita: assim como uma receita informa as etapas para preparar um prato, um programa informa ao computador quais passos tomar para executar uma tarefa. Ao usar um navegador da web, um processador de texto ou um videogame, você está utilizando um programa.</p>
+<p>Os programas são escritos em diferentes linguagens de programação, como <strong>Python</strong>, JavaScript, R ou C++. Cada linguagem tem suas próprias regras (sintaxe) e é usada para diferentes tipos de tarefas. Por exemplo, o JavaScript é comum no desenvolvimento web, enquanto o Python é popular para análise e ciência de dados.</p>
+<p>Para escrever um programa, você precisa aprender uma linguagem de programação e saber resolver problemas de maneira lógica. É como aprender um novo idioma, mas, em vez de se comunicar com pessoas, você se comunica com computadores.</p>
+</section>
+<section id="aplicacoes">
+<h2>Aplicações<a class="headerlink" href="#aplicacoes" title="Link to this heading">#</a></h2>
+<p>Com o avanço da tecnologia, a programação se tornou essencial em nosso dia a dia. Ela está presente em diversas situações cotidianas: quando nos comunicamos com outras pessoas, realizamos pagamentos, postamos fotos em redes sociais ou jogamos videogames. A programação é fundamental para a revolução tecnológica, conectando dispositivos como celulares, carros inteligentes, computadores, eletrodomésticos e até roupas inteligentes.</p>
+<p>Independentemente da área de atuação, o conhecimento em programação é uma ferramenta valiosa. Ele não apenas se tornou uma habilidade importante no mercado de trabalho, mas também promove a resolução de problemas complexos, além de estimular o pensamento crítico e a criatividade.</p>
+<p>A programação está presente em praticamente todas as áreas do conhecimento. Aqui estão algumas aplicações comuns:</p>
+<ul class="simple">
+<li><p><strong>Automação de tarefas</strong>: Redução do trabalho manual em processos repetitivos.</p></li>
+<li><p><strong>Ciência de Dados e Inteligência Artificial</strong>: Análise e interpretação de grandes volumes de dados para tomada de decisões.</p></li>
+<li><p><strong>Engenharia de Produção</strong>: Modelagem, simulação e otimização de processos industriais.</p></li>
+<li><p><strong>Desenvolvimento de Software e Web</strong>: Criação de aplicativos, sites e sistemas.</p></li>
+<li><p><strong>Jogos Digitais</strong>: Desenvolvimento de jogos e ambientes interativos.</p></li>
+</ul>
+</section>
+<section id="por-que-aprender-a-programar">
+<h2>Por que aprender a programar?<a class="headerlink" href="#por-que-aprender-a-programar" title="Link to this heading">#</a></h2>
+<p>Saber programar é uma habilidade essencial no mundo moderno, que vai além da criação de <em>softwares</em> e resolução de problemas computacionais. Aprender a programar promove o desenvolvimento do pensamento lógico e analítico, proporcionando inúmeros benefícios, como:</p>
+<ol class="arabic simple">
+<li><p><strong>Pensamento lógico e estruturado</strong>: Ensina a decompor problemas complexos em partes menores e a encontrar soluções eficientes.</p></li>
+<li><p><strong>Automação e eficiência</strong>: Permite automatizar tarefas repetitivas, economizando tempo e esforço.</p></li>
+<li><p><strong>Alta demanda no mercado de trabalho</strong>: Empresas de diversos setores buscam profissionais com habilidades em programação.</p></li>
+<li><p><strong>Capacidade de inovação</strong>: Facilita a criação de novas ferramentas, produtos e serviços.</p></li>
+<li><p><strong>Tomada de decisão baseada em dados</strong>: Auxilia na interpretação e análise de informações de forma mais eficaz.</p></li>
+</ol>
+<!--
+## (⚠️ Em construção) História da Programação
+-->
+</section>
+<section id="linguagem-de-programacao">
+<h2>Linguagem de Programação<a class="headerlink" href="#linguagem-de-programacao" title="Link to this heading">#</a></h2>
+<p>Os programadores escrevem instruções usando diversas linguagens de programação. Enquanto algumas são diretamente compreendidas pelos computadores, outras precisam ser traduzidas antes da execução. As linguagens de programação funcionam como uma ponte entre humanos e máquinas, facilitando a comunicação além dos códigos binários (0s e 1s), que são a única forma de linguagem que os dispositivos compreendem diretamente.</p>
+<section id="tiops-de-linguagem-de-programacao">
+<h3>Tiops de Linguagem de Programação<a class="headerlink" href="#tiops-de-linguagem-de-programacao" title="Link to this heading">#</a></h3>
+<p>As linguagens de programação são classificadas em três grandes grupos:</p>
+<ul class="simple">
+<li><p><strong>Linguagens de Máquina</strong>:Códigos binários que o <em>hardware</em> interpreta diretamente.</p></li>
+<li><p><strong>Linguagens Assembly</strong>: Próximas da linguagem de máquina, mas com comandos mais compreensíveis para humanos.</p></li>
+<li><p><strong>Linguagens de Alto Nível</strong>: Mais próximas da linguagem humana, com sintaxe intuitiva. Exemplos incluem Python, Java, C++ e JavaScript.</p></li>
+</ul>
+<p>Linguagens de alto nível tornam a programação mais acessível. O código escrito nelas é convertido em linguagem de máquina através de tradutores, como <strong>compiladores</strong> ou <strong>interpretadores</strong>.</p>
+</section>
+<section id="comparacao-entre-linguagens">
+<h3>Comparação entre Linguagens<a class="headerlink" href="#comparacao-entre-linguagens" title="Link to this heading">#</a></h3>
+<p>Abaixo, comparamos um mesmo algoritmo — a geração da sequência de Fibonacci — escrito em Python e em Assembly:</p>
+<div class="examples codes admonition">
+<p class="admonition-title">Python (Linguagem de Alto Nível)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">n1</span><span class="p">,</span> <span class="n">n2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span>
+  <span class="n">next_term</span> <span class="o">=</span> <span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span>
+  <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">n2</span><span class="p">,</span> <span class="n">next_term</span>
+</pre></div>
+</div>
+</div>
+<p>Neste exemplo, o código é direto e legível, usando estruturas como variáveis e loops.</p>
+<div class="examples codes admonition">
+<p class="admonition-title">Assembly (Linguagem de Baixo Nível)</p>
+<div class="highlight-asm notranslate"><div class="highlight"><pre><span></span><span class="nf">AREA</span><span class="w"> </span><span class="no">ascen</span><span class="p">,</span><span class="w"> </span><span class="no">CODE</span><span class="p">,</span><span class="w"> </span><span class="no">READONLY</span>
+<span class="w">  </span><span class="nf">ENTRY</span>
+<span class="w">  </span><span class="nf">CODE32</span>
+<span class="w">  </span><span class="nf">ADR</span><span class="w"> </span><span class="no">r0</span><span class="p">,</span><span class="w"> </span><span class="no">thumb</span>
+<span class="w">  </span><span class="nf">BX</span><span class="w"> </span><span class="no">r0</span>
+<span class="w">  </span><span class="nf">CODE16</span>
+<span class="nf">thumb</span>
+<span class="w">  </span><span class="nf">MOV</span><span class="w"> </span><span class="no">r0</span><span class="p">,</span><span class="w"> </span><span class="mi">#00</span>
+<span class="w">  </span><span class="nf">SUB</span><span class="w"> </span><span class="no">r0</span><span class="p">,</span><span class="w"> </span><span class="no">r0</span><span class="p">,</span><span class="w"> </span><span class="mi">#01</span>
+<span class="w">  </span><span class="nf">MOV</span><span class="w"> </span><span class="no">r1</span><span class="p">,</span><span class="w"> </span><span class="mi">#01</span>
+<span class="w">  </span><span class="nf">MOV</span><span class="w"> </span><span class="no">r4</span><span class="p">,</span><span class="w"> </span><span class="mi">#10</span>
+<span class="w">  </span><span class="nf">LDR</span><span class="w"> </span><span class="no">r2</span><span class="p">,</span><span class="w"> </span><span class="mi">0x40000000</span>
+<span class="nf">back</span>
+<span class="w">  </span><span class="nf">ADD</span><span class="w"> </span><span class="no">r0</span><span class="p">,</span><span class="w"> </span><span class="no">r1</span>
+<span class="w">  </span><span class="nf">STR</span><span class="w"> </span><span class="no">r0</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">r2</span><span class="p">]</span>
+<span class="w">  </span><span class="nf">ADD</span><span class="w"> </span><span class="no">r2</span><span class="p">,</span><span class="w"> </span><span class="mi">#04</span>
+<span class="w">  </span><span class="nf">MOV</span><span class="w"> </span><span class="no">r3</span><span class="p">,</span><span class="w"> </span><span class="no">r0</span>
+<span class="w">  </span><span class="nf">MOV</span><span class="w"> </span><span class="no">r0</span><span class="p">,</span><span class="w"> </span><span class="no">r1</span>
+<span class="w">  </span><span class="nf">MOV</span><span class="w"> </span><span class="no">r1</span><span class="p">,</span><span class="w"> </span><span class="no">r3</span>
+<span class="w">  </span><span class="nf">SUB</span><span class="w"> </span><span class="no">r4</span><span class="p">,</span><span class="w"> </span><span class="mi">#01</span>
+<span class="w">  </span><span class="nf">CMP</span><span class="w"> </span><span class="no">r4</span><span class="p">,</span><span class="w"> </span><span class="mi">#00</span>
+<span class="w">  </span><span class="nf">BNE</span><span class="w"> </span><span class="no">back</span>
+<span class="w">  </span><span class="nf">END</span>
+</pre></div>
+</div>
+</div>
+<p>Aqui, vemos um código mais extenso e técnico, exigindo maior conhecimento da arquitetura do processador.</p>
+<p>Ambos os exemplos geram a mesma sequência de Fibonacci, mas a legibilidade do código em Python destaca o valor das linguagens de alto nível, especialmente para iniciantes. No entanto, linguagens de baixo nível, como Assembly, são essenciais para entender e otimizar o funcionamento do hardware.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="00_intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bem-vindos(as) ao curso de Fundamentos de Programação!</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="01_nocoes_logica.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Noções de Lógica</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-e-programacao">O que é programação?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-e-um-programa-de-computador">O que é um programa de computador?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacoes">Aplicações</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-aprender-a-programar">Por que aprender a programar?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linguagem-de-programacao">Linguagem de Programação</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiops-de-linguagem-de-programacao">Tiops de Linguagem de Programação</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacao-entre-linguagens">Comparação entre Linguagens</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rafael Fogarolli Vieira
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
