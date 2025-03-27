@@ -60,7 +60,7 @@ Saber programar é uma habilidade essencial no mundo moderno, que vai além da c
 Os programadores escrevem instruções usando diversas linguagens de programação. Enquanto algumas são diretamente compreendidas pelos computadores, outras precisam ser traduzidas antes da execução. As linguagens de programação funcionam como uma ponte entre humanos e máquinas, facilitando a comunicação além dos códigos binários (0s e 1s), que são a única forma de linguagem que os dispositivos compreendem diretamente.
 
 
-### Tiops de Linguagem de Programação
+### Tipos de Linguagem de Programação
 
 As linguagens de programação são classificadas em três grandes grupos:
 

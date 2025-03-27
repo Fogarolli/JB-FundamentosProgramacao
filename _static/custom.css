@@ -45,7 +45,6 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background-color: #ddd;
 }
-
 /*---------------*/
 /*  Box-Content  */
 /*---------------*/
@@ -134,14 +133,14 @@ tbody tr:hover {
 /*-------------------*/
 .admonition.examples > .admonition-title::after {
     content: "🖥️";
-    color: rgb(225, 65, 201);
+    color: rgb(100, 100, 100);
     filter: sepia(1) saturate(3) hue-rotate(180deg);
 }
 .admonition.examples {
-    border-color: rgb(220, 14, 189);
+    border-color: rgb(150, 150, 150);
 }
 .admonition.examples .admonition-title {
-    background-color: rgba(236, 177, 227, 0.639);
+    background-color: rgba(150, 150, 150, 0.261);
 }
 .admonition.examples.codes {
     background-color: #f3f4f5 !important;

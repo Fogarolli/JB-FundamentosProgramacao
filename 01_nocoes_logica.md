@@ -20,7 +20,7 @@ A lógica proposicional, cujas raízes remontam a Aristóteles, foi desenvolvida
 A lógica proposicional permite representar afirmações do dia a dia que apresentam fatos ou transmitem informações. Chamamos de proposição (também conhecida como **sentença** ou **declaração**) qualquer oração declarativa que possa ser classificada como verdadeira ou falsa. 
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 a. Macapá é a capital do estado do Amapá. `(  )`  
 b. Ele é muito talentoso. `(  )`  
 c. Cinco é menor que doze. ($5 < 12$) `(  )`  
@@ -71,7 +71,7 @@ que atribui um valor de verdade a cada variável proposicional.
 A partir de uma propopsição $p$ qualquer, sempre podemos construir outra, denomina **negação de $p$** e indicada com o símbolo $\neg p$.
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 
 | Proposição |  Negação |
 |----------|------------|
@@ -147,7 +147,7 @@ Ao falar ou escrever, é comum combinarmos frases simples por meio de conectivos
 Colocando o conectivo $\wedge$ entre duas proposições $p$ e $q$, obtemos uma nova proposição, $p \wedge q$, denominada **conjunção** das sentenças $p$ e $q$. Os termos $p$ e $q$ são chamados de **elementos** ou **fatores** dessa expressão. Dessa forma, se combinarmos duas afirmações verdadeiras, como “Seres humanos são mamíferos” e “Mamíferos são mortais”, a proposição resultante, “Seres humanos são mamíferos **e** mamíferos são mortais”, também será verdadeira. Concordamos, então, que, se $p$ e $q$ forem proposições verdadeiras, a proposição $p \wedge q$ (leia-se: $p$ *e* $q$) deverá ser considerada verdadeira.
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 1.  
     $a$. Macapá é a capital do estado do Amapá. `(  )`  
     $b$. A capital do Amapá é quente. `(  )`  
@@ -218,7 +218,7 @@ A tabela verdade do conectivo $\wedge$ apresenta os valores lógicos de $p \wedg
 Colocando o conectivo $\vee$ entre duas proposições $p$ e $q$, obtemos uma nova proposição, $p \vee q$, denominada **disjunção** das sentenças $p$ e $q$. A disjunção representa a ideia de “ou”, ou seja, a proposição resultante $p \vee q$ será verdadeira sempre que pelo menos uma das proposições $p$ ou $q$ for verdadeira. Os termos $p$ e $q$ são os **elementos** ou **fatores**, da disjunção. 
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 1.  
     $a$. Os gorilas são mamiferos. `(  )`  
     $b$. A África é um país. `(  )`  
@@ -292,7 +292,7 @@ Ainda a partir de propoisções dadas podemos construir novas proposições medi
 Colocando o condicional $\rightarrow$ entre duas proposições $p$ e $q$, obtemos uma nova proposição, $p \rightarrow q$, que se lê: "se $p$, então $q$", "$p$ é condicição suficiente para $q$", "$q$ é condição necessária para $p$". O conectivo lógico aqui é o **condicional** e significa que a verdade de $p$ implica, ou leva a, a verdade de $q$. No condicional $p \rightarrow q$, a proposição $p$ é chamada de **antecedente** e $q$ é chamada **consequente**.
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 a. Se chover, então o solo ficará molhado.  
 b. Se um número for divisível por 2, então ele é um número par.  
 c. Se João estudar, então ele passará na prova.  
@@ -360,7 +360,7 @@ A tabela verdade do condicional $\rightarrow$ apresenta os valores lógicos de $
 Colocando o bicondicional $\leftrightarrow$ entre duas proposições $p$ e $q$, obtemos uma nova proposição, $p \leftrightarrow q$, que se lê: "$p$ se, e somente se $q$", "$p$ é condicição necessária e suficiente para $q$", "$q$ é condição necessária e suficiente para $p$" ou "se $p$, então $q$ e reciprocamente". Ao contrário da conjunção, disjunção e do condicional, o conectivo bicondicional não é, de fato, um conectivo fundamental, é um atalho conveniente. A expressão $p \leftrightarrow q$ é uma abreviatua de $(p \rightarrow q) \wedge (q \rightarrow p)$.
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 a. Uma figura é um quadrado se, e somente se, possui quatro lados iguais e quatro ângulos retos.  
 b. Um número é par se, e somente se, é divisível por 2.  
 c. Uma pessoa é maior de idade se, e somente se, tem 18 anos ou mais.  
@@ -456,7 +456,7 @@ Essa convenção reduz a necessidade de parênteses em expressões lógicas, tor
 Seja $v$ uma fbf formada a partir de proposições ($p$, $q$, $r$, $\cdots$) por meio do uso de conectivos lógicos ($\wedge$, $\vee$), modificadores ($\neg$) ou condicionais ($\rightarrow$, $\leftrightarrow$). Dizemos que $v$ é uma **tautologia** ou **proposição logicamente verdadeira** quando seu valor lógico é sempre V (verdadeiro), independentemente dos valores lógicos das proposições $p$, $q$, $r$, etc.
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 a. Se Pedro está em casa, então Pedro está em casa.  
 b. Ou hoje é segunda-feira, ou hoje não é segunda-feira.  
 c. Se está chovendo, então está chovendo, ou não está chovendo.
@@ -568,7 +568,7 @@ A tabela verdade da tautologia apresenta os valores lógicos da fbf para todas a
 Seja $f$ uma fbf formada a partir de proposições ($p$, $q$, $r$, $\cdots$) por meio do uso de conectivos lógicos ($\wedge$, $\vee$), modificadores ($\neg$) ou condicionais ($\rightarrow$, $\leftrightarrow$). Dizemos que $f$ é uma **contradição** ou **proposição logicamente falsa** quando seu valor lógico é sempre F (falso), independentemente dos valores lógicos das proposições $p$, $q$, $r$, etc.
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 a. Está chovendo e não está chovendo ao mesmo tempo.  
 b. Um número é maior que 10 e menor que 5 ao mesmo tempo.  
 c. Se João é um estudante, então João não é um estudante.  
@@ -686,7 +686,7 @@ Dadas as proposições $p$ e $q$, dizemos que "$p$ **implica** $q$" quando na ta
 <p align="center">hipótese &rArr; tese</p>
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 a. Se uma pessoa é brasileira, então ela nasceu no Brasil.  
 b. Se um carro está sem combustível, então ele não funciona.  
 c. Se hoje é segunda-feira, então amanhã será terça-feira.  
@@ -702,7 +702,7 @@ Dadas as proposições $p$ e $q$, dizemos que "$p$ é **equivalente** a $q$" qua
 
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 a. “Está chovendo ou não está chovendo” é equivalente a “Isso sempre será verdadeiro.”  
 b. “Se hoje é segunda-feira, então amanhã será terça-feira” é equivalente a “Se amanhã não for terça-feira, então hoje não é segunda-feira.”  
 ```
@@ -725,7 +725,7 @@ Os **quantificadores** são símbolos utilizados para expressar a quantidade de 
 - **Quantificador Existencial Único** ($\exists!$ ou $\exists |$): Representado pelo símbolo $\exists!$ (ou, em algumas notações, $\exists |$), é lido como “existe um único”, “existe um e apenas um”, enfatizando que há exatamente um elemento que satisfaz a sentença.
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 a. $\forall x \in \mathbb{N}, x + x = 2x.$  
    (*Para todo número natural $x$, a soma de $x$ consigo mesmo é igual ao dobro de $x$.*)
 
@@ -754,7 +754,7 @@ $$\neg(p \wedge q) \Leftrightarrow \neg p \vee \neg q$$
 Ou seja, a negação de ”$p$ e $q$ são verdadeiros” equivale a dizer que “pelo menos um deles é falso”, ou seja, ”$p$ é falso ou $q$ é falso”.
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 a. João estuda e Maria trabalha.  
 $\neg$ a. João não estuda ou Maria não trabalha.
 
@@ -771,7 +771,7 @@ $$\neg(p \vee q) \Leftrightarrow \neg p \wedge \neg q$$
 Ou seja, a negação de “pelo menos um entre $p$ e $q$ é verdadeiro” equivale a dizer que “ambos são falsos”.
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 a. Pedro gosta de matemática ou de física.  
 $\neg$ a. Pedro não gosta de matemática e não gosta de física.
 
@@ -788,7 +788,7 @@ $$\neg(p \rightarrow q) \Leftrightarrow p \wedge \neg q$$
 Ou seja, a negação de “se $p$, então $q$” equivale a dizer que ”$p$ acontece, mas $q$ não acontece”.
 
 ```{admonition} Exemplos!
-:class: examples dropdown
+:class: examples
 a. Se chove, então levo guarda-chuva.  
 $\neg$ a. Chove e não levo guarda-chuva.
 
@@ -805,7 +805,7 @@ A negação de proposições quantificadas segue uma regra geral: o quantificado
     Uma sentença quantificada com o quanttificador universal, do tipo $(\forall x)(p(x))$, é negada assim: substitui-se o quantificador existencial e nega-se $p(x)$, obtendo: $(\exists x)(\neg p(x))$. Ou seja, a negação de “para todo $x$, $p(x)$ é verdadeiro” é “existe pelo menos um $x$ tal que $p(x)$ é falso”.
 
     ```{admonition} Exemplos!
-    :class: examples dropdown
+    :class: examples
     a. Todos os alunos passaram na prova.  
     $\neg$ a. Existe pelo menos um aluno que não passou na prova.
 
@@ -818,7 +818,7 @@ A negação de proposições quantificadas segue uma regra geral: o quantificado
     Uma sentença quantificada com o quanttificador universal, do tipo $(\exists x)(p(x))$, é negada assim: substitui-se o quantificador existencial e nega-se $p(x)$, obtendo: $(\forall x)(\neg p(x))$. Ou seja, a negação de “existe pelo menos um $x$ tal que $p(x)$ é verdadeiro” é “para todo $x$, $p(x)$ é falso”.
 
     ```{admonition} Exemplos!
-    :class: examples dropdown
+    :class: examples
     a. Existe um aluno que entende lógica proposicional.  
     $\neg$ a. Nenhum aluno entende lógica proposicional.
 

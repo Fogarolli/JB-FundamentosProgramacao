@@ -15,12 +15,13 @@ A disciplina de Fundamentos de Programação tem como objetivo principal introdu
 
 ### Conteúdo Programático (⚠️ em desenvolvimento):
 
+- Introdução a Programação 
 - Lógica Computacional
 - Algoritmos
 - Ambientes de Desenvolvimento
 
 ```{admonition} Nota!
-Em breve, disponibilizaremos mais detalhes sobre os tópicos abordados, incluindo exercícios práticos e aplicações reais.”
+Em breve, disponibilizaremos mais detalhes sobre os tópicos abordados, incluindo exercícios práticos e aplicações reais.
 ```
 
 ## Feedback
@@ -55,16 +56,14 @@ Este aviso indica algo crítico que pode comprometer seu entendimento ou levar a
 Quando houver referências externas ou materiais complementares, este destaque chamará sua atenção para recursos adicionais que podem enriquecer seu aprendizado.
 ```
 
-```{admonition} Exercicío!
-:class: exercise
-Sempre que encontrar este destaque, significa que há um exercício prático para reforçar seu aprendizado. Tente resolvê-lo antes de prosseguir.
-```
-
 ```{admonition} Exemplos!
 :class: examples
 Sempre que precisar de um exemplo prático para ilustrar um conceito, este destaque será usado. Ele ajudará a entender melhor a aplicação dos conteúdos abordados.
 ```
-
+```{admonition} Exercicío!
+:class: exercise
+Sempre que encontrar este destaque, significa que há um exercício prático para reforçar seu aprendizado. Tente resolvê-lo antes de prosseguir.
+```
 
 ## Explore e Pratique!
 
