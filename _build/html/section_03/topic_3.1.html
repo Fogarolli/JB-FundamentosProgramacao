@@ -1,0 +1,719 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Estrutura Sequencial e Conceitos Fundamentais &#8212; Fundamentos de Programação</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=8a57839e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'section_03/topic_3.1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Estruturas de Seleção" href="topic_3.2.html" />
+    <link rel="prev" title="Algoritmos" href="topic_3.0.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../00_intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Fundamentos de Programação - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Fundamentos de Programação - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../00_intro.html">
+                    Bem-vindos(as) ao curso de Fundamentos de Programação!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../section_01/topic_1.0.html">Introdução a Programação</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../section_02/topic_2.0.html">Noções de Lógica</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../section_02/topic_2.1.html">Lógica Proposicional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../section_02/topic_2.2.html">Fórmula Bem-Formadas</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="topic_3.0.html">Algoritmos</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Estrutura Sequencial e Conceitos Fundamentais</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topic_3.2.html">Estruturas de Seleção</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topic_3.3.html">Estruturas de Repetição</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topic_3.4.html">Funções</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsection_03/topic_3.1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/section_03/topic_3.1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Estrutura Sequencial e Conceitos Fundamentais</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variavel">Variável</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-variavels">Tipos de variávels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vetores-e-matrizes">Vetores e Matrizes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressoes">Expressões</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atribuicao">Atribuição</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-de-saida">Comando de Saída</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-de-entrada">Comando de Entrada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplos">Exemplos</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="estrutura-sequencial-e-conceitos-fundamentais">
+<h1>Estrutura Sequencial e Conceitos Fundamentais<a class="headerlink" href="#estrutura-sequencial-e-conceitos-fundamentais" title="Link to this heading">#</a></h1>
+<p>A estrutura sequencial representa o modelo mais simples e direto de execução de um algoritmo. Nesse tipo de estrutura, as instruções são realizadas uma após a outra, respeitando exatamente a ordem em que foram escritas. Ou seja, cada comando só é executado após a conclusão do comando anterior, garantindo um fluxo contínuo e previsível. De modo geral, um algoritmo sequencial segue uma sequência lógica de passos: inicia-se com a declaração das <strong>variáveis</strong>, passa pelos <strong>comandos de entrada</strong> de dados e/ou <strong>atribuições</strong>, realiza o <strong>processamento das informações</strong> e, por fim, apresenta os resultados por meio dos <strong>comandos de saída</strong> de dados.</p>
+<p>Essa estrutura é a base para a construção de algoritmos e programas, servindo como ponto de partida antes da introdução de estruturas mais complexas, como seleção e repetição. A seguir, vamos explorar cada um desses elementos fundamentais que compõem a estrutura sequencial: variáveis, expressões, atribuição, comandos de entrada e saída.</p>
+<section id="variavel">
+<h2>Variável<a class="headerlink" href="#variavel" title="Link to this heading">#</a></h2>
+<p>Uma <strong>variável</strong> é um local na memória principal, ou seja, um endereço que armazena um determinado conteúdo. Em linguagens de alto nível, é possível atribuir um nome a esse endereço para facilitar a programação. O conteúdo armazenado pode assumir diferentes tipos, como inteiro, real, caractere, lógico, entre outros. Em algoritmos, as variáveis serão definidas no início, por meio do comando definido:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tipo</span> <span class="n">da</span> <span class="n">variável</span>   <span class="n">nome</span> <span class="n">da</span> <span class="n">variável</span>   <span class="p">;</span>
+</pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Atenção!</p>
+<p>Quando formos dar nome às variáveis, se faz necessário seguirmos algumas regras. É bom ressaltar que estas regras irão variar de acordo com a linguagem. As seguintes regras:</p>
+<ol class="arabic simple">
+<li><p>O primeiro caractere é uma <strong>letra</strong>.</p></li>
+<li><p>Se houver mais de um caractere, só poderemos usar: <strong>letra</strong> ou <strong>algarismo</strong>.</p></li>
+<li><p>Nomes de variáveis escritas com letras maiúsculas serão diferentes de letras minúsculas. Lembre-se: media é <strong>diferente</strong> de MEDIA.</p></li>
+<li><p>Nenhuma palavra reservada poderá ser nome de uma variável.</p></li>
+</ol>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">a</span> <span class="p">;</span>  
+<span class="nb">float</span> <span class="n">b</span> <span class="p">;</span>  
+<span class="nb">str</span> <span class="n">nome</span> <span class="p">;</span>  
+<span class="nb">bool</span> <span class="n">r</span> <span class="p">;</span>  
+</pre></div>
+</div>
+<section id="tipos-de-variavels">
+<h3>Tipos de variávels<a class="headerlink" href="#tipos-de-variavels" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Númericas</strong>: Variáveis numéricas são aquelas que armazenam dados numéricos, podendo ser divididas em duas classes:</p>
+<ul>
+<li><p><strong>int</strong>: Os números inteiros são aqueles que <strong>não</strong> possuem componentes decimais ou fracionários, podendo ser positivos ou negativos.</p></li>
+<li><p><strong>real</strong> (também chamado de <strong>float</strong>): Os números reais são aqueles que podem possuir componentes decimais ou fracionários, podendo também ser positivos ou reais.</p></li>
+</ul>
+</li>
+<li><p><strong>string</strong> (também chamado de <strong>str</strong>): Também conhecida como caractere, alfanumérica ou literal. Esse tipo de variável armazena dados que contêm letras dígitos e/ou símbolos especiais.</p></li>
+<li><p><strong>logico</strong> (também chamado de <strong>booleano</strong> ou <strong>bool</strong>): Também conhecido como booleano. É representado no algoritmo pelo dois únicos valores lógicos possíveis: verdadeiro ou falso.</p></li>
+</ul>
+</section>
+<section id="vetores-e-matrizes">
+<h3>Vetores e Matrizes<a class="headerlink" href="#vetores-e-matrizes" title="Link to this heading">#</a></h3>
+<p>Na programação, frequentemente lidamos com a necessidade de armazenar e manipular coleções de dados. Para isso, utilizamos estruturas de dados como vetores e matrizes, que permitem organizar essas informações de forma eficiente. Um vetor é um arranjo de elementos armazenados um após o outro, todos sob o mesmo nome, mas acessados por meio de um índice. A ideia é semelhante à de uma matriz linha na matemática, ou seja, uma sequência de elementos dispostos em uma única linha com várias colunas. Essa estrutura é útil quando precisamos armazenar uma série de valores relacionados, como as notas de uma turma, os preços de uma lista de produtos ou qualquer outro conjunto de dados onde a ordem importa e cada elemento pode ser identificado por sua posição.</p>
+<p>Quando precisamos representar dados em duas dimensões — por exemplo, em linhas e colunas — utilizamos as matrizes. Assim como os vetores, as matrizes armazenam elementos do mesmo tipo, mas organizados em formato de tabela, permitindo o acesso a cada elemento por meio de dois índices: um para a linha e outro para a coluna. Essa estrutura é especialmente útil em situações como armazenamento de tabelas numéricas, imagens (que podem ser vistas como matrizes de pixels) ou qualquer cenário onde as informações estejam naturalmente dispostas em duas dimensões. A seguir, apresentaremos a sintaxe de declaração de vetores e matrizes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tipo</span> <span class="n">da</span> <span class="n">variável</span>   <span class="n">vator</span><span class="p">[</span><span class="n">dimensão</span><span class="p">]</span>   <span class="p">;</span>
+<span class="n">tipo</span> <span class="n">da</span> <span class="n">variável</span>   <span class="n">matriz</span><span class="p">[</span><span class="n">dimensão</span><span class="p">][</span><span class="n">dimensão</span><span class="p">]</span>   <span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="expressoes">
+<h2>Expressões<a class="headerlink" href="#expressoes" title="Link to this heading">#</a></h2>
+<p>O conceito de expressão em termos computacionais está intimamente ligado ao conceito de expressão (ou fórmula) matemática, onde um conjunto de variáveis e constantes numéricas relaciona-se por meio de operadores compondo uma fórmula que, uma vez avaliada, resulta num valor. As expressões dividem-se em:</p>
+<ul class="simple">
+<li><p><strong>Aritméticas</strong>. Expressões aritméticas são aquelas cujo resultado da avaliação é do tipo numérico, seja ele inteiro ou real. Somente o uso de operadores aritméticos e variáveis numéricas é permitido em expressões deste tipo.</p>
+<ul>
+<li><p>Como exemplo de operadores e expressões aritméticas temos: soma (<span class="math notranslate nohighlight">\(\color{red}{+}\)</span>), subtração (<span class="math notranslate nohighlight">\(\color{red}{-}\)</span>), multiplicação (<span class="math notranslate nohighlight">\(\color{red}{\times}\)</span>), divisão (<span class="math notranslate nohighlight">\(\color{red}{\div}\)</span>), exponenciação (<span class="math notranslate nohighlight">\(\color{red}{x^{y}}\)</span>) e o resto (<span class="math notranslate nohighlight">\(\color{red}{\%}\)</span>).</p></li>
+</ul>
+</li>
+<li><p><strong>Relacionais</strong>. Uma expressão relacional, ou simplesmente relação, é uma comparação realizada entre dois valores de mesmo tipo básico. Estes valores são representados na relação através de constantes, variáveis ou expressões aritméticas.</p>
+<ul>
+<li><p>Como exemplos de operadores relacionais matematicamente conhecidos temos: <span class="math notranslate nohighlight">\(\color{red}{=}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{\neq}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{&gt;}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{&lt;}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{\geq}\)</span> e <span class="math notranslate nohighlight">\(\color{red}{\leq}\)</span>.</p></li>
+</ul>
+</li>
+<li><p><strong>Lógica ou Boolena</strong>. Denomina-se expressão lógica a expressão cujos operadores são lógicos e cujos operandos são relações, constantes e/ou variáveis do tipo lógico.</p>
+<ul>
+<li><p>Como exemplo de operadores lógicos, matematicamente conhecidos, temos: <span class="math notranslate nohighlight">\(\color{red}{\land}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{\lor}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{\neg}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{\rightarrow}\)</span> e <span class="math notranslate nohighlight">\(\color{red}{\leftrightarrow}\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="atribuicao">
+<h2>Atribuição<a class="headerlink" href="#atribuicao" title="Link to this heading">#</a></h2>
+<p>É a principal forma de se armazenar um dado em uma variável. Esse comando permite que você forneça um valor a uma variável, onde o tipo desse valor tem de ser compatível com a variável.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">identificador</span>  <span class="o">&lt;-</span>  <span class="n">expressão</span>  <span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>identificador</strong>: é o nome da variável à qual está sendo atribuído um valor.</p></li>
+<li><p><strong>&lt;-</strong>: é o símbolo de atribuição, formado pelos sinais <span class="math notranslate nohighlight">\(\color{red}{&lt;}\)</span> e <span class="math notranslate nohighlight">\(\color{red}{-}\)</span>.</p></li>
+<li><p><strong>expressão</strong>: pode ser uma expressão aritmética, uma expressão lógica ou literal cuja avaliação (resultado) é atribuída ao identificador (variável).</p></li>
+<li><p><strong>;</strong> (porto e vírgula): finaliza o comando.</p></li>
+</ul>
+<div class="examples admonition">
+<p class="admonition-title">Exemplo de Atribuição</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">&lt;-</span> <span class="mi">10</span> <span class="p">;</span> 
+</pre></div>
+</div>
+<p>Como se lê?
+A variável x recebe o valor 10 ou x recebe o valor 10.</p>
+<p>O que faz o computador?
+Nesse momento, na memória do computador, onde já estava alocado um espaço para a variável x (realizado na declaração de variáveis), essa variável recebe o valor 10.</p>
+</div>
+</section>
+<section id="comando-de-saida">
+<h2>Comando de Saída<a class="headerlink" href="#comando-de-saida" title="Link to this heading">#</a></h2>
+<p>É o comando responsável por exibir um resultado, uma informação ao usuário. O valor de cada variável é buscado na memória e inserido em um dispositivo de saída. Através desse comando o computador pode emitir os resultados e outras mensagens para o usuário através da tela do computador ou uma impressora.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">imprima</span>  <span class="n">expressão_ou_variável_ou_constantes</span> <span class="p">;</span>
+</pre></div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<div style="algoritmo_metade">
+<pre>
+Algoritmo Imprimir
+<p>prog imp
+imprima “Fundamentos de Programação”
+fimprog
+</pre></p>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<br>
+<div style="text-align: center;">
+  <img src="/Users/rafaelvieira/Documents/00_Codigos/JB-FundamentosProgramacao/_imgs/imprimir.png"" alt="Descrição da imagem" style="width: 60%;">
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<div style="algoritmo_metade">
+<pre>
+Algoritmo Imprimir 2
+<p>prog imp02
+int x;
+x &lt;- 10;
+imprima “O valor de x é: “, x;
+fimprog
+</pre></p>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<br>
+<div style="text-align: center;">
+  <img src="/Users/rafaelvieira/Documents/00_Codigos/JB-FundamentosProgramacao/_imgs/imprimir02.png"" alt="Descrição da imagem" style="width: 60%;">
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="comando-de-entrada">
+<h2>Comando de Entrada<a class="headerlink" href="#comando-de-entrada" title="Link to this heading">#</a></h2>
+<p>É o comando que permite que o usuário digite dados, possibilitando um “diálogo com o computador”. O dado digitado é armazenado temporariamente em um registrador e, depois, copiado para a posição de memória indicada no comando. Lembre-se de que o nome de uma variável representa uma posição de memória.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">leia</span>  <span class="n">nome_de_uma_variável</span> <span class="p">;</span>
+</pre></div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<div style="algoritmo_metade">
+<pre>
+Leitura de Dados
+<p>prog leitura
+int y;
+leia y;
+imprima “O valor de y é: “, y;
+fimprog
+</pre></p>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<br>
+<div style="text-align: center;">
+  <img src="/Users/rafaelvieira/Documents/00_Codigos/JB-FundamentosProgramacao/_imgs/valor_5.png"" alt="Descrição da imagem" style="width: 90%;">
+</div>
+</div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Operações</span> <span class="n">Aritméticas</span>
+
+<span class="n">prog</span> <span class="n">aritmtica</span>
+    <span class="nb">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+    <span class="n">leia</span> <span class="n">x</span><span class="p">;</span>
+    <span class="n">leia</span> <span class="n">y</span><span class="p">;</span>
+    <span class="n">imprima</span> <span class="s2">&quot;O valor de x é: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">;</span>
+    <span class="n">imprima</span> <span class="s2">&quot;O valor de y é: &quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+    <span class="n">imprima</span> <span class="s2">&quot;O valor da soma de x e y é: &quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>    
+    <span class="n">imprima</span> <span class="s2">&quot;O valor da subtração de x e y é: &quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">;</span>
+<span class="n">fimprog</span>
+</pre></div>
+</div>
+</section>
+<section id="exemplos">
+<h2>Exemplos<a class="headerlink" href="#exemplos" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./section_03"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="topic_3.0.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Algoritmos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="topic_3.2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Estruturas de Seleção</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variavel">Variável</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-variavels">Tipos de variávels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vetores-e-matrizes">Vetores e Matrizes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressoes">Expressões</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atribuicao">Atribuição</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-de-saida">Comando de Saída</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comando-de-entrada">Comando de Entrada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplos">Exemplos</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rafael Fogarolli Vieira
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -16,13 +16,9 @@ A disciplina de Fundamentos de Programação tem como objetivo principal introdu
 ### Conteúdo Programático (⚠️ em desenvolvimento):
 
 - Introdução a Programação 
-- Lógica Computacional
+- Noções de Lógica
 - Algoritmos
-- Ambientes de Desenvolvimento
 
-```{admonition} Nota!
-Em breve, disponibilizaremos mais detalhes sobre os tópicos abordados, incluindo exercícios práticos e aplicações reais.
-```
 
 ## Feedback
 
@@ -96,7 +92,6 @@ A plataforma [Beecrowd](https://beecrowd.com/) oferece desafios de programação
 ```{admonition} Nota!
 Iremos utilizar essa plataforma ao longo das nossas aulas, portanto, recomendo que você se antecipe e crie sua conta para já se familiarizar com o ambiente e os desafios disponíveis.
 ```
-
 
 ## 🎬📺 Indicações de Filmes e Séries 
 

@@ -1,0 +1,918 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Fórmula Bem-Formadas &#8212; Fundamentos de Programação</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=8a57839e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'section_02/topic_2.2';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Algoritmos" href="../section_03/topic_3.0.html" />
+    <link rel="prev" title="Lógica Proposicional" href="topic_2.1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../00_intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Fundamentos de Programação - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Fundamentos de Programação - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../00_intro.html">
+                    Bem-vindos(as) ao curso de Fundamentos de Programação!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../section_01/topic_1.0.html">Introdução a Programação</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="topic_2.0.html">Noções de Lógica</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="topic_2.1.html">Lógica Proposicional</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Fórmula Bem-Formadas</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../section_03/topic_3.0.html">Algoritmos</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../section_03/topic_3.1.html">Estrutura Sequencial e Conceitos Fundamentais</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../section_03/topic_3.2.html">Estruturas de Seleção</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../section_03/topic_3.3.html">Estruturas de Repetição</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../section_03/topic_3.4.html">Funções</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsection_02/topic_2.2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/section_02/topic_2.2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Fórmula Bem-Formadas</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tautologias">Tautologias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contradicoes">Contradições</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relacao-de-implicacao">Relação de Implicação</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relacao-de-equivalencia">Relação de Equivalência</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencas-abertas-e-quantificadores">Sentenças Abertas e Quantificadores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-negar-proposicoes-compostas">Como Negar Proposições Compostas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negacao-de-uma-conjuncao">Negação de uma Conjunção</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negacao-de-uma-disjuncao">Negação de uma Disjunção</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negacao-de-um-condicional">Negação de um Condicional</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negacao-de-proposicoes-quantificadas">Negação de Proposições Quantificadas</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="formula-bem-formadas">
+<h1>Fórmula Bem-Formadas<a class="headerlink" href="#formula-bem-formadas" title="Link to this heading">#</a></h1>
+<p>Como já vimos, podemos combinar variáveis proposicionais, conectivos lógicos e parênteses para formar novas expressões lógicas. Por exemplo:</p>
+<div class="math notranslate nohighlight">
+\[
+(p \rightarrow q) \wedge (q \rightarrow p)
+\]</div>
+<p>No entanto, para que uma expressão seja considerada válida, ela deve obedecer a certas <strong>regras de sintaxe</strong>, que determinam quais sequências de símbolos formam <strong>expressões bem-formadas</strong>. Por exemplo, a seguinte cadeia de símbolos:</p>
+<div class="math notranslate nohighlight">
+\[
+p)) \; \wedge \rightarrow \wedge \; qp \vee rq
+\]</div>
+<p>não é uma expressão válida. Uma sequência válida que obedece às regras de formação é chamada de <strong>fórmula bem-formada</strong> (<strong>fbf</strong>). Formalmente, uma fbf é definida de maneira indutiva pelas seguintes regras:</p>
+<ol class="arabic simple">
+<li><p>uma variável proposicional <span class="math notranslate nohighlight">\(\color{red}{p}\)</span> é uma fbf.</p></li>
+<li><p>se <span class="math notranslate nohighlight">\(\color{red}{q}\)</span> é uma fbf, então <span class="math notranslate nohighlight">\(\color{red}{\neg q}\)</span> é uma fbf.</p></li>
+<li><p>se <span class="math notranslate nohighlight">\(\color{red}{p}\)</span> e <span class="math notranslate nohighlight">\(\color{red}{q}\)</span> são fbfs, então (<span class="math notranslate nohighlight">\(\color{red}{p \wedge q}\)</span>), (<span class="math notranslate nohighlight">\(\color{red}{p \vee q}\)</span>) e (<span class="math notranslate nohighlight">\(\color{red}{p \rightarrow q}\)</span>) também são fbfs.</p></li>
+</ol>
+<p>Para reduzir o número de parênteses necessários em uma fbf, estipulamos uma ordem de aplicação dos conectivos lógicos. Essa ordem de precedência segue a seguinte hierarquia:</p>
+<ol class="arabic simple">
+<li><p>Parênteses ( ) – utilizados para agrupar expressões e definir explicitamente a ordem das operações.</p></li>
+<li><p>Negação <span class="math notranslate nohighlight">\(\color{red}{\neg}\)</span> – operador unário que tem prioridade sobre os conectivos binários.</p></li>
+<li><p>Conjunção <span class="math notranslate nohighlight">\(\color{red}{\wedge}\)</span> e Disjunção <span class="math notranslate nohighlight">\(\color{red}{\vee}\)</span> – avaliadas antes das implicações.</p></li>
+<li><p>Condicional <span class="math notranslate nohighlight">\(\color{red}{\rightarrow}\)</span> – processada após os operadores anteriores.</p></li>
+<li><p>Bicondicional <span class="math notranslate nohighlight">\(\color{red}{\leftrightarrow}\)</span> – tem a menor precedência, sendo avaliada por último.</p></li>
+</ol>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota!</p>
+<p>Essa convenção reduz a necessidade de parênteses em expressões lógicas, tornando a notação mais enxuta e intuitiva.</p>
+</div>
+<section id="tautologias">
+<h2>Tautologias<a class="headerlink" href="#tautologias" title="Link to this heading">#</a></h2>
+<p>Seja <span class="math notranslate nohighlight">\(\color{red}{v}\)</span> uma fbf formada a partir de proposições (<span class="math notranslate nohighlight">\(\color{red}{p}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{q}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{r}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{\cdots}\)</span>) por meio do uso de conectivos lógicos (<span class="math notranslate nohighlight">\(\color{red}{\wedge}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{\vee}\)</span>), modificadores (<span class="math notranslate nohighlight">\(\color{red}{\neg}\)</span>) ou condicionais (<span class="math notranslate nohighlight">\(\color{red}{\rightarrow}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{\leftrightarrow}\)</span>). Dizemos que <span class="math notranslate nohighlight">\(\color{red}{v}\)</span> é uma <strong>tautologia</strong> ou <strong>proposição logicamente verdadeira</strong> quando seu valor lógico é sempre V (verdadeiro), independentemente dos valores lógicos das proposições <span class="math notranslate nohighlight">\(\color{red}{p}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{q}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{r}\)</span>, etc.</p>
+<div class="examples admonition">
+<p class="admonition-title">Exemplo 1.7</p>
+<p>a. Se Pedro está em casa, então Pedro está em casa.<br />
+b. Ou hoje é segunda-feira, ou hoje não é segunda-feira.<br />
+c. Se está chovendo, então está chovendo, ou não está chovendo.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Atenção!</p>
+<p>Uma tautologia é intrinsecamente verdadeira devido à sua própria estrutura, ou seja, sua veracidade não depende dos valores lógicos atribuídos às suas variáveis proposicionais.</p>
+</div>
+<p>A tabela verdade da tautologia apresenta os valores lógicos da fbf para todas as combinações possíveis de valores lógicos de suas variáveis proposicionais.</p>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Verdade</title>
+    <link rel="stylesheet" href="/Users/rafaelvieira/Documents/00_Codigos/JB-FundamentosProgramacao/_statics/custom.css">
+</head>
+<body>
+    <p class="table-title"><strong> Tabela Verdade da Tautologia </strong></p>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>r</th>
+                    <th>(p v q)</th>
+                    <th>(p v q v r)</th>                    
+                    <th>(p v q) &rarr; (p v q v r)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+</section>
+<section id="contradicoes">
+<h2>Contradições<a class="headerlink" href="#contradicoes" title="Link to this heading">#</a></h2>
+<p>Seja <span class="math notranslate nohighlight">\(\color{red}{f}\)</span> uma fbf formada a partir de proposições (<span class="math notranslate nohighlight">\(\color{red}{p}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{q}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{r}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{\cdots}\)</span>) por meio do uso de conectivos lógicos (<span class="math notranslate nohighlight">\(\color{red}{\wedge}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{\vee}\)</span>), modificadores (<span class="math notranslate nohighlight">\(\color{red}{\neg}\)</span>) ou condicionais (<span class="math notranslate nohighlight">\(\color{red}{\rightarrow}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{\leftrightarrow}\)</span>). Dizemos que <span class="math notranslate nohighlight">\(\color{red}{f}\)</span> é uma <strong>contradição</strong> ou <strong>proposição logicamente falsa</strong> quando seu valor lógico é sempre F (falso), independentemente dos valores lógicos das proposições <span class="math notranslate nohighlight">\(\color{red}{p}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{q}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{r}\)</span>, etc.</p>
+<div class="examples admonition">
+<p class="admonition-title">Exemplo 1.8</p>
+<p>a. Está chovendo e não está chovendo ao mesmo tempo.<br />
+b. Um número é maior que 10 e menor que 5 ao mesmo tempo.<br />
+c. Se João é um estudante, então João não é um estudante.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Atenção!</p>
+<p>Uma contradição é intrinsecamente falsa devido à sua própria estrutura, ou seja, sua falsidade não depende dos valores lógicos atribuídos às suas variáveis proposicionais,</p>
+</div>
+<p>A tabela verdade de uma contradição apresenta os valores lógicos para todas as combinações possíveis de valores lógicos das variaveis proposicionais.</p>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Verdade</title>
+    <link rel="stylesheet" href="/Users/rafaelvieira/Documents/00_Codigos/JB-FundamentosProgramacao/_statics/custom.css">
+</head>
+<body>
+    <p class="table-title"></strong> Tabela Verdade da Contradição </strong></p>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>r</th>
+                    <th>(p v q)</th>
+                    <th>(¬p ∧ ¬q ∧ ¬r)</th>                    
+                    <th>(p ∨ q) ∧ (¬p ∧ ¬q ∧ ¬r)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+</section>
+<section id="relacao-de-implicacao">
+<h2>Relação de Implicação<a class="headerlink" href="#relacao-de-implicacao" title="Link to this heading">#</a></h2>
+<p>Dadas as proposições <span class="math notranslate nohighlight">\(\color{red}{p}\)</span> e <span class="math notranslate nohighlight">\(\color{red}{q}\)</span>, dizemos que “<span class="math notranslate nohighlight">\(\color{red}{p}\)</span> <strong>implica</strong> <span class="math notranslate nohighlight">\(\color{red}{q}\)</span>” quando na tabela verdade de <span class="math notranslate nohighlight">\(\color{red}{p}\)</span> e <span class="math notranslate nohighlight">\(\color{red}{q}\)</span> não ocorre <strong>VF</strong> em nenhuma linha, isto é, quando não temos simultaneamente <span class="math notranslate nohighlight">\(\color{red}{p}\)</span> verdadeira e <span class="math notranslate nohighlight">\(\color{red}{q}\)</span> falsa. Quando <span class="math notranslate nohighlight">\(\color{red}{p}\)</span> implica em <span class="math notranslate nohighlight">\(\color{red}{q}\)</span>, indicamos <span class="math notranslate nohighlight">\(\color{red}{p \Rightarrow q}\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Notemos que <span class="math notranslate nohighlight">\(\color{red}{p}\)</span> implica <span class="math notranslate nohighlight">\(\color{red}{q}\)</span> quando o condicional <span class="math notranslate nohighlight">\(\color{red}{p \rightarrow q}\)</span> é verdeiro.</p></li>
+<li><p>Todo teorema é uma implicação da forma:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\text{hipótese} \Rightarrow \text{tese}
+\]</div>
+<div class="examples admonition">
+<p class="admonition-title">Exemplo 1.9</p>
+<p>a. Se uma pessoa é brasileira, então ela nasceu no Brasil.<br />
+b. Se um carro está sem combustível, então ele não funciona.<br />
+c. Se hoje é segunda-feira, então amanhã será terça-feira.</p>
+</div>
+</section>
+<section id="relacao-de-equivalencia">
+<h2>Relação de Equivalência<a class="headerlink" href="#relacao-de-equivalencia" title="Link to this heading">#</a></h2>
+<p>Dadas as proposições <span class="math notranslate nohighlight">\(\color{red}{p}\)</span> e <span class="math notranslate nohighlight">\(\color{red}{q}\)</span>, dizemos que “<span class="math notranslate nohighlight">\(\color{red}{p}\)</span> é <strong>equivalente</strong> a <span class="math notranslate nohighlight">\(\color{red}{q}\)</span>” quando <span class="math notranslate nohighlight">\(\color{red}{p}\)</span> e <span class="math notranslate nohighlight">\(\color{red}{q}\)</span> têm tabelas-verdades iguais, isto é, quando <span class="math notranslate nohighlight">\(\color{red}{p}\)</span> e <span class="math notranslate nohighlight">\(\color{red}{q}\)</span> têm sempre o mesmo valor lógico. Quando <span class="math notranslate nohighlight">\(\color{red}{p}\)</span> é equivalente a <span class="math notranslate nohighlight">\(\color{red}{q}\)</span>, indicamos: <span class="math notranslate nohighlight">\(\color{red}{p \Leftrightarrow q}\)</span></p>
+<ol class="arabic simple">
+<li><p>Notemos que <span class="math notranslate nohighlight">\(\color{red}{p}\)</span> equivale a <span class="math notranslate nohighlight">\(\color{red}{q}\)</span> quando o condicional <span class="math notranslate nohighlight">\(\color{red}{p \leftrightarrow q}\)</span> é verdadeiro.</p></li>
+<li><p>Todo teorema cujo recíproco também é verdadeiro é uma equivalência.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\text{hipótese} \Leftrightarrow \text{tese}
+\]</div>
+<div class="examples admonition">
+<p class="admonition-title">Exemplo 1.10</p>
+<p>a. “Está chovendo ou não está chovendo” é equivalente a “Isso sempre será verdadeiro.”<br />
+b. “Se hoje é segunda-feira, então amanhã será terça-feira” é equivalente a “Se amanhã não for terça-feira, então hoje não é segunda-feira.”</p>
+</div>
+</section>
+<section id="sentencas-abertas-e-quantificadores">
+<h2>Sentenças Abertas e Quantificadores<a class="headerlink" href="#sentencas-abertas-e-quantificadores" title="Link to this heading">#</a></h2>
+<p>Orações que contêm variáveis são chamadas <strong>funções proposicionais</strong> ou <strong>sentenças abertas</strong>. Tais orações não são prosições, pois seu valor lógico (V ou F) é discutível, depende do valor dado às variáveis.</p>
+<p>Uma sentença aberta é uma expressão que contém variáveis e, por isso, não pode ser classificada como verdadeira ou falsa até que essas variáveis sejam substituídas por valores específicos. Dessa forma, sentenças abertas não são proposições, pois seu valor lógico depende da atribuição de valores às variáveis.</p>
+<div class="warning admonition">
+<p class="admonition-title">Atenção!!</p>
+<p>Há, entretanto, duas maneiras de transformar sentenças abertas em proposições:</p>
+<ol class="arabic simple">
+<li><p><strong>atribuindo valores específicos às variáveis</strong>, tornando-a uma afirmação concreta, passível de ser classificada como verdadeira ou falsa.</p></li>
+<li><p><strong>utilizando quantificadores</strong>, que indicam a abrangência da afirmação sobre um conjunto de elementos.</p></li>
+</ol>
+</div>
+<p>Os <strong>quantificadores</strong> são símbolos utilizados para expressar a quantidade de elementos do universo de discurso para os quais uma sentença aberta se torna verdadeira.</p>
+<ul class="simple">
+<li><p><strong>Quantificador Universal</strong> (<span class="math notranslate nohighlight">\(\color{red}{\forall}\)</span>): representado pelo símbolo <span class="math notranslate nohighlight">\(\color{red}{\forall}\)</span>, é lido como “para todo”, “para cada” ou “qualquer que seja”. Ele indica que a sentença é válida para todos os elementos de um determinado conjunto.</p></li>
+<li><p><strong>Quantificador Existencial</strong> (<span class="math notranslate nohighlight">\(\color{red}{\exists}\)</span>): representado pelo símbolo <span class="math notranslate nohighlight">\(\color{red}{\exists}\)</span>, é lido como “existe”, “existe pelo menos um” ou “há um”. Ele afirma que a sentença é verdadeira para pelo menos um elemento do conjunto.</p></li>
+<li><p><strong>Quantificador Existencial Único</strong> (<span class="math notranslate nohighlight">\(\color{red}{\exists!}\)</span> ou <span class="math notranslate nohighlight">\(\color{red}{\exists |}\)</span>): Representado pelo símbolo <span class="math notranslate nohighlight">\(\color{red}{\exists!}\)</span> (ou, em algumas notações, <span class="math notranslate nohighlight">\(\color{red}{\exists |}\)</span>), é lido como “existe um único”, “existe um e apenas um”, enfatizando que há exatamente um elemento que satisfaz a sentença.</p></li>
+</ul>
+<div class="examples admonition">
+<p class="admonition-title">Exemplo 1.11</p>
+<p>a. <span class="math notranslate nohighlight">\(\forall x \in \mathbb{N}, x + x = 2x.\)</span><br />
+(<em>Para todo número natural <span class="math notranslate nohighlight">\(x\)</span>, a soma de <span class="math notranslate nohighlight">\(x\)</span> consigo mesmo é igual ao dobro de <span class="math notranslate nohighlight">\(x\)</span>.</em>)</p>
+<p>b. <span class="math notranslate nohighlight">\(\exists x \in \mathbb{Z}, x^2 = 9.\)</span><br />
+(<em>Existe pelo menos um número inteiro <span class="math notranslate nohighlight">\(x\)</span> cujo quadrado é 9.</em>)</p>
+<p>c. <span class="math notranslate nohighlight">\(\exists! x \in \mathbb{R}, x^2 = 0.\)</span><br />
+(<em>Existe um único número real <span class="math notranslate nohighlight">\(x\)</span> cujo quadrado é 0.</em>)</p>
+<p>d. <span class="math notranslate nohighlight">\(\forall x \in \mathbb{Z}, x + 0 = x.\)</span><br />
+(<em>Para todo número inteiro <span class="math notranslate nohighlight">\(x\)</span>, a soma de <span class="math notranslate nohighlight">\(x\)</span> com 0 é igual a <span class="math notranslate nohighlight">\(x\)</span>.</em>)</p>
+</div>
+</section>
+<section id="como-negar-proposicoes-compostas">
+<h2>Como Negar Proposições Compostas<a class="headerlink" href="#como-negar-proposicoes-compostas" title="Link to this heading">#</a></h2>
+<p>A negação de uma proposição composta segue regras específicas baseadas na equivalência lógica. É importante ter cuidado ao negar proposições, especialmente quando se trata de proposições compostas, pois a aplicação incorreta da negação pode levar a erros na interpretação lógica. O uso adequado de parênteses e a compreensão da estrutura da proposição original são fundamentais para evitar ambiguidades.</p>
+<p>A seguir, veremos como negar diferentes tipos de proposições.</p>
+<section id="negacao-de-uma-conjuncao">
+<h3>Negação de uma Conjunção<a class="headerlink" href="#negacao-de-uma-conjuncao" title="Link to this heading">#</a></h3>
+<p>A negação de uma conjunção segue a seguinte equivalência lógica:</p>
+<div class="math notranslate nohighlight">
+\[\neg(p \wedge q) \Leftrightarrow \neg p \vee \neg q\]</div>
+<p>Ou seja, a negação de ”<span class="math notranslate nohighlight">\(\color{red}{p}\)</span> e <span class="math notranslate nohighlight">\(\color{red}{q}\)</span> são verdadeiros” equivale a dizer que “pelo menos um deles é falso”, ou seja, ”<span class="math notranslate nohighlight">\(\color{red}{p}\)</span> é falso ou <span class="math notranslate nohighlight">\(\color{red}{q}\)</span> é falso”.</p>
+<div class="examples admonition">
+<p class="admonition-title">Exemplo 12</p>
+<p>a. João estuda e Maria trabalha.<br />
+<span class="math notranslate nohighlight">\(\neg\)</span> a. João não estuda ou Maria não trabalha.</p>
+<p>b. O número <span class="math notranslate nohighlight">\(x\)</span> é positivo e par.<br />
+<span class="math notranslate nohighlight">\(\neg\)</span> b. O número <span class="math notranslate nohighlight">\(x\)</span> não é positivo ou não é par.</p>
+</div>
+</section>
+<section id="negacao-de-uma-disjuncao">
+<h3>Negação de uma Disjunção<a class="headerlink" href="#negacao-de-uma-disjuncao" title="Link to this heading">#</a></h3>
+<p>A negação de uma disjunção segue a seguinte equivalência lógica:</p>
+<div class="math notranslate nohighlight">
+\[\neg(p \vee q) \Leftrightarrow \neg p \wedge \neg q\]</div>
+<p>Ou seja, a negação de “pelo menos um entre <span class="math notranslate nohighlight">\(\color{red}{p}\)</span> e <span class="math notranslate nohighlight">\(\color{red}{q}\)</span> é verdadeiro” equivale a dizer que “ambos são falsos”.</p>
+<div class="examples admonition">
+<p class="admonition-title">Exemplo 13</p>
+<p>a. Pedro gosta de matemática ou de física.<br />
+<span class="math notranslate nohighlight">\(\neg\)</span> a. Pedro não gosta de matemática e não gosta de física.</p>
+<p>b. O número <span class="math notranslate nohighlight">\(x\)</span> é par ou múltiplo de 3.<br />
+<span class="math notranslate nohighlight">\(\neg\)</span> b. O número <span class="math notranslate nohighlight">\(x\)</span> não é par e não é múltiplo de 3.</p>
+</div>
+</section>
+<section id="negacao-de-um-condicional">
+<h3>Negação de um Condicional<a class="headerlink" href="#negacao-de-um-condicional" title="Link to this heading">#</a></h3>
+<p>A negação de uma proposição condicional segue a seguinte equivalência lógica:</p>
+<div class="math notranslate nohighlight">
+\[\neg(p \rightarrow q) \Leftrightarrow p \wedge \neg q\]</div>
+<p>Ou seja, a negação de “se <span class="math notranslate nohighlight">\(\color{red}{p}\)</span>, então <span class="math notranslate nohighlight">\(\color{red}{q}\)</span>” equivale a dizer que ”<span class="math notranslate nohighlight">\(\color{red}{p}\)</span> acontece, mas <span class="math notranslate nohighlight">\(\color{red}{q}\)</span> não acontece”.</p>
+<div class="examples admonition">
+<p class="admonition-title">Exemplo 14</p>
+<p>a. Se chove, então levo guarda-chuva.<br />
+<span class="math notranslate nohighlight">\(\neg\)</span> a. Chove e não levo guarda-chuva.</p>
+<p>ba Se um número é divisível por 4, então ele é par.<br />
+<span class="math notranslate nohighlight">\(\neg\)</span> b. O número é divisível por 4 e não é par.</p>
+</div>
+</section>
+<section id="negacao-de-proposicoes-quantificadas">
+<h3>Negação de Proposições Quantificadas<a class="headerlink" href="#negacao-de-proposicoes-quantificadas" title="Link to this heading">#</a></h3>
+<p>A negação de proposições quantificadas segue uma regra geral: o quantificador é trocado pelo seu oposto, e a proposição dentro dele é negada.</p>
+<ul>
+<li><p><strong>Quantificador Universal</strong>:</p>
+<p>Uma sentença quantificada com o quanttificador universal, do tipo <span class="math notranslate nohighlight">\(\color{red}{(\forall x)(p(x))}\)</span>, é negada assim: substitui-se o quantificador existencial e nega-se <span class="math notranslate nohighlight">\(\color{red}{p(x)}\)</span>, obtendo: <span class="math notranslate nohighlight">\(\color{red}{(\exists x)(\neg p(x))}\)</span>. Ou seja, a negação de “para todo <span class="math notranslate nohighlight">\(\color{red}{x}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{p(x)}\)</span> é verdadeiro” é “existe pelo menos um <span class="math notranslate nohighlight">\(\color{red}{x}\)</span> tal que <span class="math notranslate nohighlight">\(\color{red}{p(x)}\)</span> é falso”.</p>
+<div class="examples admonition">
+<p class="admonition-title">Exemplo 15</p>
+<p>a. Todos os alunos passaram na prova.<br />
+<span class="math notranslate nohighlight">\(\neg\)</span> a. Existe pelo menos um aluno que não passou na prova.</p>
+<p>b. Para todo número real <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(x^2 \geq 0\)</span>.<br />
+<span class="math notranslate nohighlight">\(\neg\)</span> b. Existe pelo menos um número real <span class="math notranslate nohighlight">\(x\)</span> tal que <span class="math notranslate nohighlight">\(x^2 &lt; 0\)</span>.</p>
+</div>
+</li>
+<li><p><strong>Quantifacador Existencial</strong>:</p>
+<p>Uma sentença quantificada com o quanttificador universal, do tipo <span class="math notranslate nohighlight">\(\color{red}{(\exists x)(p(x))}\)</span>, é negada assim: substitui-se o quantificador existencial e nega-se <span class="math notranslate nohighlight">\(\color{red}{p(x)}\)</span>, obtendo: <span class="math notranslate nohighlight">\(\color{red}{(\forall x)(\neg p(x))}\)</span>. Ou seja, a negação de “existe pelo menos um <span class="math notranslate nohighlight">\(\color{red}{x}\)</span> tal que <span class="math notranslate nohighlight">\(\color{red}{p(x)}\)</span> é verdadeiro” é “para todo <span class="math notranslate nohighlight">\(\color{red}{x}\)</span>, <span class="math notranslate nohighlight">\(\color{red}{p(x)}\)</span> é falso”.</p>
+<div class="examples admonition">
+<p class="admonition-title">Exemplo 16</p>
+<p>a. Existe um aluno que entende lógica proposicional.<br />
+<span class="math notranslate nohighlight">\(\neg\)</span> a. Nenhum aluno entende lógica proposicional.</p>
+<p>b. Existe um número natural <span class="math notranslate nohighlight">\(x\)</span> tal que <span class="math notranslate nohighlight">\(x + 5 = 2\)</span>.<br />
+<span class="math notranslate nohighlight">\(\neg\)</span> b. Para todo número natural <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(x + 5 \neq 2\)</span>.</p>
+</div>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./section_02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="topic_2.1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lógica Proposicional</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../section_03/topic_3.0.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Algoritmos</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tautologias">Tautologias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contradicoes">Contradições</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relacao-de-implicacao">Relação de Implicação</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relacao-de-equivalencia">Relação de Equivalência</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentencas-abertas-e-quantificadores">Sentenças Abertas e Quantificadores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-negar-proposicoes-compostas">Como Negar Proposições Compostas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negacao-de-uma-conjuncao">Negação de uma Conjunção</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negacao-de-uma-disjuncao">Negação de uma Disjunção</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negacao-de-um-condicional">Negação de um Condicional</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negacao-de-proposicoes-quantificadas">Negação de Proposições Quantificadas</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rafael Fogarolli Vieira
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
